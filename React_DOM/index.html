@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <style>
+    html{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      background:linear-gradient(rgb(240, 158, 158),rgb(166, 205, 166));
+      min-height: 100vh; 
+    }
+    .heading{
+      color: rgb(46, 26, 84);
+      text-align: center;
+    }
+    .text{
+      color: rgb(16, 16, 74);
+      text-align: center;
+      font-weight: 700;
+    }
+    .text:hover{
+      scale: 1.1;
+      cursor: pointer;
+      font-weight: 900;
+    }
+    img{
+      border-radius: 10px;
+    }
+    img:hover{
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      cursor: pointer;
+      scale: 1.01;
+    }
+    .cardsCont{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 28px;
+    }
+    .divContCards{
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+    const h1Tag = React.createElement('h1',{className:'heading'}, 'This is done by React DOM');
+    const pTag1 = React.createElement('p',{className:'text'}, 'HeadPhones');
+    const imageTag1 = React.createElement('img',{src:'images/p1.jpeg',width:300,height:250})
+    const pTag2 = React.createElement('p',{className:'text'}, 'Camera');
+    const imageTag2 = React.createElement('img',{src:'images/p2.jpg',width:300,height:250})
+    const pTag3 = React.createElement('p',{className:'text'}, 'Smart Watch');
+    const imageTag3 = React.createElement('img',{src:'images/p3.jpeg',width:300,height:250})
+    const pTag4 = React.createElement('p',{className:'text'}, 'Shoes');
+    const imageTag4 = React.createElement('img',{src:'images/p4.jpeg',width:300,height:250})
+    const pTag5 = React.createElement('p',{className:'text'}, 'Smart TV');
+    const imageTag5 = React.createElement('img',{src:'images/p5.jpg',width:300,height:250})
+    const pTag6 = React.createElement('p',{className:'text'}, 'laptop');
+    const imageTag6 = React.createElement('img',{src:'images/p6.jpeg',width:300,height:250})
+
+    const headingCont = React.createElement('div', {className:'divContCards'},h1Tag);
+    const card1Cont = React.createElement('div', {className:'divContCards'},imageTag1,pTag1);
+    const card2Cont = React.createElement('div', {className:'divContCards'},imageTag2,pTag2);
+    const card3Cont = React.createElement('div', {className:'divContCards'},imageTag3,pTag3);
+    const card4Cont = React.createElement('div', {className:'divContCards'},imageTag4,pTag4);
+    const card5Cont = React.createElement('div', {className:'divContCards'},imageTag5,pTag5);
+    const card6Cont = React.createElement('div', {className:'divContCards'},imageTag6,pTag6);
+    const cardsDiv = React.createElement('div', {className:'cardsCont'},card1Cont,card2Cont,card3Cont,card4Cont,card5Cont,card6Cont);
+    const mainDiv = React.createElement('div', {className:'mainCont'},h1Tag,cardsDiv);
+
+    const rootElement = document.getElementById('root');
+    const root = ReactDOM.createRoot(rootElement);
+    root.render(mainDiv)
+  </script>
+</body>
+</html>
