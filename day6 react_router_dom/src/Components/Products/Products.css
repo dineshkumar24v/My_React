@@ -1,0 +1,19 @@
+
+
+
+.productsCont{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  text-align: center;
+  justify-content: center;
+  margin: 20px;
+}
+.products{
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  height: 40vh;
+  width: 20vw;
+  cursor: pointer;
+}
