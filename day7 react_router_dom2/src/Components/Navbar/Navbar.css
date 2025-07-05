@@ -1,0 +1,28 @@
+
+
+#navCont{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(126, 168, 245);
+  color: white;
+}
+.nav_left{
+  padding: 10px;
+}
+.nav_right{
+  display: flex;
+  gap: 30px;
+  padding: 10px;
+}
+.nav_right link{
+  padding: 5px 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.nav_right link:hover{
+    background-color: rgb(68, 63, 84);
+    border-radius: 5px;
+}
+
+
